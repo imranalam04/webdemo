@@ -1,0 +1,11 @@
+.benefits-wrapper-2 {
+    -webkit-text-stroke-color: #2e2e2d;
+    height: 60%;
+    background-color: #f2f0ea;
+    border: 2.5px solid #000;
+    border-radius: 14px;
+    /* flex-direction: column;
+    align-items: flex-start; */
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}

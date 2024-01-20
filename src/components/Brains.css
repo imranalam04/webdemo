@@ -1,0 +1,21 @@
+.team6_item {
+    min-width: 100%;
+    text-align: center;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 13px;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.team6_image-wrapper {
+    width: 100%;
+    border-bottom: 3px solid #000;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+}   

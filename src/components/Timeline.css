@@ -1,0 +1,10 @@
+.step-1-info-wrapper {
+    background-color: var(--white);
+    border: 3px solid #2e2e2d;
+    border-radius: 16px;
+    flex: 1;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 24px;
+    display: flex;
+}

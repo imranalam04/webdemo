@@ -1,6 +1,6 @@
 import React from "react";
 
-const FAQ = () => {
+const Question = () => {
   return (
     <div>
       <section className="py-24 ">
@@ -161,4 +161,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Question;

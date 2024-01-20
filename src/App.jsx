@@ -12,8 +12,8 @@ import Session from "./components/Session";
 import FramerCards from "./components/FramerCards";
 import Pricing from "./components/Pricing";
 import Brains from "./components/Brains";
-import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import Question from "./components/Question";
 // import ServiceCard from "./components/ServiceCard";
 
 const App = () => {
@@ -75,7 +75,7 @@ const App = () => {
       <Brains />
       </div>
       <div className="">
-     <FAQ/>
+     <Question/>
       </div>
       <div className="">
      <Footer/>

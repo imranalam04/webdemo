@@ -14,3 +14,9 @@
     position: relative;
     
 }
+
+  @media (max-width: 768px) {
+    .responsive-paragraph {
+      font-size: 14px; /* Adjust font size for smaller screens as needed */
+    }
+  }

@@ -1,25 +1,27 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Firstabout from "./components/Firstabout";
 import SecondAbout from "./components/SecondAbout";
 import HowItWorks from "./components/HowItWorks";
 import Timeline from "./components/Timeline";
 import Service from "./components/Service";
-import CardGroup from "./components/CardGroup";
 import Session from "./components/Session";
 import FramerCards from "./components/FramerCards";
 import Pricing from "./components/Pricing";
 import Brains from "./components/Brains";
 import Footer from "./components/Footer";
 import Question from "./components/Question";
+import About from "./components/About";
+import GridCard from "./components/GridCard";
 // import ServiceCard from "./components/ServiceCard";
+import "./App.css";
+import DevelopmentTimeLine from "./components/DevelopmentTimeLine";
 
 const App = () => {
   return (
     <div>
-      <div>
+      <div className="py-5">
         <Navbar />
       </div>
       <div className="mt-20">
@@ -28,59 +30,48 @@ const App = () => {
       <div className="mt-52">
         <About />
       </div>
-      <div className="flex flex-col md:flex-row ">
-        <div className="mt-5 w-full md:w-10/12">
-          <Firstabout />
-        </div>
-        <div className="mt-5 w-full md:w-10/12">
-          <SecondAbout />
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-2 md:mx-24">
+        <Firstabout />
+        <SecondAbout />
       </div>
-      <div className="mt-16">
+      <div className="min-h-screen flex flex-col py-72 md:py-0">
+      <div className="md:mt-96 sm:mt-0 flex-shrink-0 h-[120] sm:h-auto mt-72">
         <HowItWorks />
       </div>
-      <div className="">
+      <div className="flex-shrink-0">
         <Timeline />
       </div>
+    </div>
       <div>
-        <div className=" mt-32">
+        <div className="md:my-32">
           <Service />
         </div>
         <div className="flex flex-wrap justify-center"></div>
       </div>
-      <div className="mt-10 mx-4 md:mx-16 grid grid-cols-2 md:grid-cols-4 gap-2">
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
-        <CardGroup />
+      <div className="justify-center">
+        <GridCard />
+      </div>
+      <div className="mt-16 md:mt-10">
+        <Session />
       </div>
       <div className="mt-16 md:mt-28">
-      <Session />
+        <FramerCards />
       </div>
-      <div  className="mt-16 md:mt-28">
-      <FramerCards />
-      </div>
-      <div className="mt-16 md:mt-28">
-      <Pricing />
+      <div className="mt-16 md:mt-16">
+        <DevelopmentTimeLine />
       </div>
       <div className="mt-16 md:mt-28">
-      <Brains />
+        <Pricing />
+      </div>
+      <div className="mt-16 md:mt-28">
+        <Brains />
       </div>
       <div className="">
-     <Question/>
+        <Question />
       </div>
-      <div className="">
-     <Footer/>
+      <div className="mt-32">
+        <Footer />
       </div>
-     
     </div>
   );
 };

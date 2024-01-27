@@ -16,16 +16,16 @@ import { GiProgression } from "react-icons/gi";
 const Timeline = () => {
   return (
     <div>
-      <VerticalTimeline>
+      <VerticalTimeline className="">
         <VerticalTimelineElement
           className="vertical-timeline-element--work "
           iconStyle={{ background: "black", color: "#fff" }}
           icon={<IoCall />}
         >
-          <h3 className="vertical-timeline-element-title text-4xl font-semibold py-3">
+          <h3 className="vertical-timeline-element-title text-slate-900 text-4xl font-semibold py-3">
             Book a Discovery Call
           </h3>
-          <h4 className="vertical-timeline-element-subtitle ">
+          <h4 className="vertical-timeline-element-subtitle text-slate-800">
             Lets chat about your business...
           </h4>
           <p className="text-slate-800">
@@ -40,10 +40,10 @@ const Timeline = () => {
           iconStyle={{ background: "black", color: "#fff" }}
           icon={<AiOutlineProject />}
         >
-          <h3 className="vertical-timeline-element-title text-4xl font-semibold py-3">
+          <h3 className="vertical-timeline-element-title text-4xl text-slate-900 font-semibold py-3">
             Subscribe & Add Your Project Details
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h4 className="vertical-timeline-element-subtitle text-slate-800">
             Time to set up your Project Management Board...
           </h4>
           <p className="text-slate-800">
@@ -58,10 +58,10 @@ const Timeline = () => {
           iconStyle={{ background: "black", color: "#fff" }}
           icon={<MdTaskAlt />}
         >
-          <h3 className="vertical-timeline-element-title text-4xl font-semibold py-3">
+          <h3 className="vertical-timeline-element-title text-slate-900 text-4xl font-semibold py-3">
             Create Your Project Tasks
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h4 className="vertical-timeline-element-subtitle text-slate-800">
             We create your tasks and set up Weekly Sprints
           </h4>
           <p className="text-slate-800">
@@ -72,14 +72,14 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work "
+          className="vertical-timeline-element--work text-slate-900"
           iconStyle={{ background: "black", color: "#fff" }}
           icon={<BiRevision />}
         >
           <h3 className="vertical-timeline-element-title text-4xl font-semibold py-3">
             Request Unlimited Revisions
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h4 className="vertical-timeline-element-subtitle text-slate-800">
             Once a task is reviewed mark it as complete...
           </h4>
           <p className="text-slate-800">
@@ -94,10 +94,10 @@ const Timeline = () => {
           iconStyle={{ background: "black", color: "#fff" }}
           icon={<GiProgression />}
         >
-          <h3 className="vertical-timeline-element-title text-4xl font-semibold py-3">
+          <h3 className="vertical-timeline-element-title text-4xl font-semibold py-3 text-slate-900">
             Track and Manage your Progress
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h4 className="vertical-timeline-element-subtitle text-slate-800">
             Watch as we bring your idea to life...
           </h4>
           <p className="text-slate-800">

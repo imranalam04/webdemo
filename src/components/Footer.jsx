@@ -5,13 +5,10 @@ const Footer = () => {
   return (
     <div>
       <footer aria-label="Site Footer">
-        <div className="  ">
+        <div className="">
           <div className="flex flex-col items-center gap-4 bg-white p-6 shadow-lg sm:flex-row sm:justify-between">
             <div className="md:mx-8 lg:mx-32">
-              <img
-                src={footerlogo}
-                className="w-32"
-              />
+              <img src={footerlogo} className="md:w-32 w-16" />
             </div>
 
             <a
@@ -40,7 +37,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="bg-black  flex flex-col flex-wrap">
-            <div className="md:m-8 lg:m-24 mx-16 py-5">
+            <div className="md:m-8 lg:m-24 mx-16 py-5   sm:text-left">
               <span className="text-white text-2xl md:text-3xl ">
                 We're Gonna Make It
               </span>
@@ -50,7 +47,7 @@ const Footer = () => {
               </p>
               <div>
                 <hr className=" border-slate-700 md:my-10 w-full " />
-                <div className="mt-10">
+                <div className="mt-10 text-center sm:text-left">
                   <span className="text-slate-300 font-semibold">
                     © Copyright 2022 Black Box Ventures LLC
                   </span>

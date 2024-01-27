@@ -6,7 +6,7 @@ import "./Brains.css";
 const Brains = () => {
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center text-black">
         <h1 className="text-2xl md:text-6xl font-bold mt-8">The Brains</h1>
         <div className="mt-5">
           <p className="text-lg font-sans text-center">
@@ -21,14 +21,14 @@ const Brains = () => {
           </a>
           <div className="p-5">
             <a href="#">
-              <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-xl text-black md:text-2xl font-bold tracking-tight ">
                 Brett Malinowski
               </h5>
             </a>
             <div>
-              <span className="text-lg">CEO</span>
+              <span className="text-lg text-black">CEO</span>
             </div>
-            <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 text-sm md:text-base font-normal text-slate-900 ">
               Educating Millions on Ai, Web3 and Future Technologies | Co-Founder
               of WGMI Academy, WGMI Labs, and WGMI Media
             </p>
@@ -40,14 +40,14 @@ const Brains = () => {
         </a>
         <div className="p-5">
           <a href="#">
-            <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="text-black mb-2 text-xl md:text-2xl font-bold tracking-tight">
               Brett Malinowski
             </h5>
           </a>
           <div>
-            <span className="text-lg">CEO</span>
+            <span className="text-lg text-black">CEO</span>
           </div>
-          <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
+          <p className="mb-3 text-sm md:text-base font-normal text-slate-900">
             Educating Millions on Ai, Web3 and Future Technologies | Co-Founder
             of WGMI Academy, WGMI Labs, and WGMI Media
           </p>

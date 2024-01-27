@@ -1,162 +1,92 @@
-import React from "react";
+import React, { useState } from "react";
+// import './Question.css'
 
 const Question = () => {
+  const questions = [
+    {
+      id: 1,
+      question: "Who's the ideal client for WGMI Labs?",
+      answer:
+        "WGMI Labs is the perfect partner for entrepreneurs and businesses of all sizes, looking to develop Software or enhance their operations with the power of advanced technology. We understand the hurdles of hiring a full-time developer – the time spent vetting candidates, the high costs, and the risk of mismatched skill sets.",
+    },
+    {
+      id: 2,
+      question: "Why wouldn't I just hire a full-time developer?",
+      answer:
+        "Excellent question! Hiring a full-time senior developer can be costly, with an average annual salary exceeding $120,000, plus the extra costs of benefits. The hiring process itself can also be lengthy and challenging. More importantly, your workload might fluctuate, leading to periods when you don't have enough tasks to fully utilize a full-time developer. By using our subscription agency membership, you only pay for the development work you need, enjoy the flexibility to pause or resume your subscription as required, and avoid the financial burden of an underutilized in-house developer.",
+    },
+    {
+      id: 3,
+      question: "Is there a limit to how many tasks or projects I can have?",
+      answer:
+        "With our subscription service, you can add or edit as many tasks in your queue as you need. Our team will compile multiple tasks in your queue and turn them into weekly . Tasks inside of a sprint will be completed that week, and each week a new sprint will be created, comprised of new tasks.  Each task in a sprint will go into once completed ensuring that it's completed to your satisfaction before moving on.",
+    },
+    {
+      id: 4,
+      question: "How long does it take to complete a development task?",
+      answer:
+        "The turnaround time for your software depends on the complexity of the task. On average, most tasks requests are completed in just 24-72 hours. However, more complex tasks may take longer to finish",
+    },
+    {
+      id: 5,
+      question: "What if I'm not satisfied with the software solution?",
+      answer:
+        "No worries! Your satisfaction is our priority. If you're not happy with the software solution, we'll work on revising it until you're 100% satisfied with the result.",
+    },
+    {
+      id: 6,
+      question:
+        "What happens if I don't need development work for a certain month?",
+      answer:
+        "If you don't need any work for a specific month, you can pause your subscription and resume it when you need our services again. There are no penalties or additional fees for pausing your subscription.",
+    },
+    {
+      id: 7,
+      question: "Is there a Refund Policy?",
+      answer:
+        "Due to the high quality nature of the work, there will be no refunds issued once a Task is active and has started.",
+    },
+  ];
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <div>
-      <section className="py-24 ">
-        <div className="container mx-auto px-4">
-          <h1 className=" text-black text-4xl lg:text-5xl font-bold font-heading text-center mb-4">
-          Frequently asked questions?
+      <section className="py-[3%] ">
+        <div className="container mx-auto ">
+          <h1 className="text-black text-3xl lg:text-5xl font-bold font-heading text-center md:flex md:mx-40">
+            Frequently asked questions?
           </h1>
-          <p className="text-center text-lg text-black mb-16">
-            Here you will find the answers to the frequently asked questions.
-          </p>
-          <div className="flex justify-center flex-wrap gap-6 mb-10 ">
-            <a
-              className="h-14 inline-flex items-center justify-center  sm:w-auto text-center py-4 px-6 rounded-full bg-white border border-gray-100 shadow font-bold font-heading hover:bg-gray-50 focus:ring focus:ring-orange-200 transition duration-200"
-              href="#"
-            >
-              General
-            </a>
-            <a
-              className="h-14 inline-flex items-center justify-center  sm:w-auto text-center py-4 px-6 rounded-full bg-orange-500 border border-white shadow font-bold font-heading text-white hover:bg-black hover: focus:ring focus:ring-orange-200 transition duration-200"
-              href="#"
-            >
-              Community
-            </a>
-            <a
-              className="h-14 inline-flex items-center justify-center  sm:w-auto text-center py-4 px-6 rounded-full bg-orange-500 border border-white shadow font-bold font-heading text-white hover:bg-black hover: focus:ring focus:ring-orange-200 transition duration-200"
-              href="#"
-            >
-              Pricing
-            </a>
-          </div>
-          <div className="flex flex-col items-center">
-          <div className="w-9/12 bg-white border border-orange-400 rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 className="text-black text-lg font-semibold">
-            Who's the ideal client for WGMI Labs?
-            </h2>
-            <a
-              className="text-orange-500 hover:text-orange-100 transition duration-200 w-8 h-8"
-              href="#"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewbox="0 0 32 32"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M16 2.66669C8.63586 2.66669 2.66663 8.63592 2.66663 16C2.66663 23.3641 8.63586 29.3334 16 29.3334C23.3641 29.3334 29.3333 23.3641 29.3333 16C29.3333 8.63592 23.3641 2.66669 16 2.66669ZM17.0256 11.8975C17.0256 11.6254 16.9175 11.3646 16.7252 11.1722C16.5329 10.9799 16.272 10.8718 16 10.8718C15.7279 10.8718 15.4671 10.9799 15.2747 11.1722C15.0824 11.3646 14.9743 11.6254 14.9743 11.8975V14.9744H11.8974C11.6254 14.9744 11.3645 15.0824 11.1722 15.2748C10.9798 15.4671 10.8718 15.728 10.8718 16C10.8718 16.272 10.9798 16.5329 11.1722 16.7253C11.3645 16.9176 11.6254 17.0257 11.8974 17.0257H14.9743V20.1026C14.9743 20.3746 15.0824 20.6355 15.2747 20.8278C15.4671 21.0202 15.7279 21.1282 16 21.1282C16.272 21.1282 16.5329 21.0202 16.7252 20.8278C16.9175 20.6355 17.0256 20.3746 17.0256 20.1026V17.0257H20.1025C20.3745 17.0257 20.6354 16.9176 20.8278 16.7253C21.0201 16.5329 21.1282 16.272 21.1282 16C21.1282 15.728 21.0201 15.4671 20.8278 15.2748C20.6354 15.0824 20.3745 14.9744 20.1025 14.9744H17.0256V11.8975Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </a>
-          </div>
-          <div className="w-9/12 bg-white border border-orange-400 rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 className="text-black text-lg font-semibold">
-            Why wouldn't I just hire a full-time developer?
-            </h2>
-            <a
-              className="text-orange-500 hover:text-orange-100 transition duration-200 w-8 h-8"
-              href="#"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewbox="0 0 32 32"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M16 2.66669C8.63586 2.66669 2.66663 8.63592 2.66663 16C2.66663 23.3641 8.63586 29.3334 16 29.3334C23.3641 29.3334 29.3333 23.3641 29.3333 16C29.3333 8.63592 23.3641 2.66669 16 2.66669ZM17.0256 11.8975C17.0256 11.6254 16.9175 11.3646 16.7252 11.1722C16.5329 10.9799 16.272 10.8718 16 10.8718C15.7279 10.8718 15.4671 10.9799 15.2747 11.1722C15.0824 11.3646 14.9743 11.6254 14.9743 11.8975V14.9744H11.8974C11.6254 14.9744 11.3645 15.0824 11.1722 15.2748C10.9798 15.4671 10.8718 15.728 10.8718 16C10.8718 16.272 10.9798 16.5329 11.1722 16.7253C11.3645 16.9176 11.6254 17.0257 11.8974 17.0257H14.9743V20.1026C14.9743 20.3746 15.0824 20.6355 15.2747 20.8278C15.4671 21.0202 15.7279 21.1282 16 21.1282C16.272 21.1282 16.5329 21.0202 16.7252 20.8278C16.9175 20.6355 17.0256 20.3746 17.0256 20.1026V17.0257H20.1025C20.3745 17.0257 20.6354 16.9176 20.8278 16.7253C21.0201 16.5329 21.1282 16.272 21.1282 16C21.1282 15.728 21.0201 15.4671 20.8278 15.2748C20.6354 15.0824 20.3745 14.9744 20.1025 14.9744H17.0256V11.8975Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </a>
-          </div>
-          <div className="w-9/12  bg-white border border-orange-400 rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 className="text-black text-lg font-semibold">
-            Is there a limit to how many tasks or projects I can have?
-
-            </h2>
-            <a
-              className="text-orange-500 hover:text-orange-100 transition duration-200 w-8 h-8"
-              href="#"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewbox="0 0 32 32"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M16 2.66669C8.63586 2.66669 2.66663 8.63592 2.66663 16C2.66663 23.3641 8.63586 29.3334 16 29.3334C23.3641 29.3334 29.3333 23.3641 29.3333 16C29.3333 8.63592 23.3641 2.66669 16 2.66669ZM17.0256 11.8975C17.0256 11.6254 16.9175 11.3646 16.7252 11.1722C16.5329 10.9799 16.272 10.8718 16 10.8718C15.7279 10.8718 15.4671 10.9799 15.2747 11.1722C15.0824 11.3646 14.9743 11.6254 14.9743 11.8975V14.9744H11.8974C11.6254 14.9744 11.3645 15.0824 11.1722 15.2748C10.9798 15.4671 10.8718 15.728 10.8718 16C10.8718 16.272 10.9798 16.5329 11.1722 16.7253C11.3645 16.9176 11.6254 17.0257 11.8974 17.0257H14.9743V20.1026C14.9743 20.3746 15.0824 20.6355 15.2747 20.8278C15.4671 21.0202 15.7279 21.1282 16 21.1282C16.272 21.1282 16.5329 21.0202 16.7252 20.8278C16.9175 20.6355 17.0256 20.3746 17.0256 20.1026V17.0257H20.1025C20.3745 17.0257 20.6354 16.9176 20.8278 16.7253C21.0201 16.5329 21.1282 16.272 21.1282 16C21.1282 15.728 21.0201 15.4671 20.8278 15.2748C20.6354 15.0824 20.3745 14.9744 20.1025 14.9744H17.0256V11.8975Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </a>
-          </div>
-          <div className="w-9/12 bg-white border border-orange-400 rounded-3xl mb-3 p-6 flex items-center justify-between gap-6">
-            <h2 className="text-black text-lg font-semibold">
-            How long does it take to complete a development task?
-            </h2>
-            <a
-              className="text-orange-500 hover:text-orange-100 transition duration-200 w-8 h-8"
-              href="#"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewbox="0 0 32 32"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M16 2.66669C8.63586 2.66669 2.66663 8.63592 2.66663 16C2.66663 23.3641 8.63586 29.3334 16 29.3334C23.3641 29.3334 29.3333 23.3641 29.3333 16C29.3333 8.63592 23.3641 2.66669 16 2.66669ZM17.0256 11.8975C17.0256 11.6254 16.9175 11.3646 16.7252 11.1722C16.5329 10.9799 16.272 10.8718 16 10.8718C15.7279 10.8718 15.4671 10.9799 15.2747 11.1722C15.0824 11.3646 14.9743 11.6254 14.9743 11.8975V14.9744H11.8974C11.6254 14.9744 11.3645 15.0824 11.1722 15.2748C10.9798 15.4671 10.8718 15.728 10.8718 16C10.8718 16.272 10.9798 16.5329 11.1722 16.7253C11.3645 16.9176 11.6254 17.0257 11.8974 17.0257H14.9743V20.1026C14.9743 20.3746 15.0824 20.6355 15.2747 20.8278C15.4671 21.0202 15.7279 21.1282 16 21.1282C16.272 21.1282 16.5329 21.0202 16.7252 20.8278C16.9175 20.6355 17.0256 20.3746 17.0256 20.1026V17.0257H20.1025C20.3745 17.0257 20.6354 16.9176 20.8278 16.7253C21.0201 16.5329 21.1282 16.272 21.1282 16C21.1282 15.728 21.0201 15.4671 20.8278 15.2748C20.6354 15.0824 20.3745 14.9744 20.1025 14.9744H17.0256V11.8975Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </a>
-            
-          </div>
-          <div className="w-9/12 bg-white border border-orange-400 rounded-3xl p-6 flex items-center justify-between gap-6">
-            <h2 className="text-black text-lg font-semibold">
-            What if I'm not satisfied with the software solution?
-            </h2>
-            <a
-              className="text-orange-500 hover:text-orange-100 transition duration-200 w-8 h-8"
-              href="#"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewbox="0 0 32 32"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M16 2.66669C8.63586 2.66669 2.66663 8.63592 2.66663 16C2.66663 23.3641 8.63586 29.3334 16 29.3334C23.3641 29.3334 29.3333 23.3641 29.3333 16C29.3333 8.63592 23.3641 2.66669 16 2.66669ZM17.0256 11.8975C17.0256 11.6254 16.9175 11.3646 16.7252 11.1722C16.5329 10.9799 16.272 10.8718 16 10.8718C15.7279 10.8718 15.4671 10.9799 15.2747 11.1722C15.0824 11.3646 14.9743 11.6254 14.9743 11.8975V14.9744H11.8974C11.6254 14.9744 11.3645 15.0824 11.1722 15.2748C10.9798 15.4671 10.8718 15.728 10.8718 16C10.8718 16.272 10.9798 16.5329 11.1722 16.7253C11.3645 16.9176 11.6254 17.0257 11.8974 17.0257H14.9743V20.1026C14.9743 20.3746 15.0824 20.6355 15.2747 20.8278C15.4671 21.0202 15.7279 21.1282 16 21.1282C16.272 21.1282 16.5329 21.0202 16.7252 20.8278C16.9175 20.6355 17.0256 20.3746 17.0256 20.1026V17.0257H20.1025C20.3745 17.0257 20.6354 16.9176 20.8278 16.7253C21.0201 16.5329 21.1282 16.272 21.1282 16C21.1282 15.728 21.0201 15.4671 20.8278 15.2748C20.6354 15.0824 20.3745 14.9744 20.1025 14.9744H17.0256V11.8975Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </a>
-          </div>
-          </div>
         </div>
       </section>
+      <div className="flex items-center justify-center">
+        <div className="w-9/12 flex flex-col justify-center gap-3">
+          {questions.map((q, index) => (
+            <div
+              key={q.id}
+              className={`collapse collapse-arrow bg-white border-black border-t-2 border-4 ${
+                index === activeIndex ? "open" : null
+              }`}
+            >
+              <input
+                type="radio"
+                name="my-accordion-2"
+                checked={index === activeIndex}
+                onChange={() => handleToggle(index)}
+              />
+              <div className="collapse-title text-xl font-medium text-slate-900 ">
+                {q.question}
+              </div>
+              <div className="collapse-content text-slate-800">
+                <p>{q.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

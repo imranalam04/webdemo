@@ -7,7 +7,7 @@ const Pricing = () => {
       <section className="py-10 libraries-usecases_card3-copy mx-4 md:mx-32">
         <div className="container mx-auto px-4">
           <div className="md:mx-12">
-            <span className="libraries-usecases_text-label">
+            <span className="libraries-usecases_text-label text-black">
               START YOUR MEMBERSHIP
             </span>
           </div>
@@ -20,11 +20,11 @@ const Pricing = () => {
                       <h2 className="font-heading mb-8 text-4xl md:text-6xl text-black font-black tracking-tight">
                         Pricing plans
                       </h2>
-                      <p className="text-gray-500 font-bold">
+                      <p className="text-gray-800 font-bold">
                         One subscription, unlimited possibilities. Our pricing
                         model is as clear and straightforward as it can get.
                       </p>
-                      <p className="text-gray-500 font-bold mt-5">
+                      <p className="text-gray-800 font-bold mt-5">
                         Pay a simple, flat monthly subscription fee and unlock
                         unlimited access to our No Code software development
                         solutions. No hidden charges, no additional fees. You
@@ -52,8 +52,8 @@ const Pricing = () => {
                           </svg>
                         </div>
                       </div>
-                      <p className="font-medium text-gray-700">
-                        <span className="text-gray-300 font-bold">4.2/5</span>
+                      <p className="font-medium text-gray-900">
+                        <span className="text-gray-800 font-bold">4.2/5</span>
                         <span>(45k Reviews)</span>
                       </p>
                     </div>
@@ -88,7 +88,7 @@ const Pricing = () => {
                           <h4 className="font-heading mb-4 text-gray-300 font-bold">
                             What’s included:
                           </h4>
-                          <p className="text-gray-500 font-bold">
+                          <p className="text-gray-200 font-bold">
                             130+ Coded blocks Best for Developers Made with
                             Tailwind CSS Premium Support Future Updates
                           </p>
@@ -122,7 +122,7 @@ const Pricing = () => {
                           <h4 className="font-heading mb-4 text-gray-300 font-bold">
                             What’s included:
                           </h4>
-                          <p className="text-gray-500 font-bold">
+                          <p className="text-gray-200 font-bold">
                             130+ Coded blocks Best for Developers Made with
                             Tailwind CSS Premium Support Future Updates
                           </p>
